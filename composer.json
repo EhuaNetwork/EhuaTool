@@ -1,19 +1,15 @@
 {
   "name": "Ehua/EhuaTool",
-  "description": "自用工具包",
+  "description": "description",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "ehua",
-      "email": "3135491919@qq.com"
+      "name": "ehua9",
+      "email": "email@example.com"
     }
   ],
   "require": {
-    "php": ">=5.4.0",
-    "jaeger/querylist": "^4.2",
-    "liguangchun/bt": "^1.0",
-    "php-webdriver/webdriver": "^1.11",
-    "guzzlehttp/guzzle": "^7.3",
+
   }
 }
