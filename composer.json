@@ -10,6 +10,10 @@
     }
   ],
   "require": {
-
+    "php": ">=7.0",
+    "topthink/framework": "5.0.*",
+    "guzzlehttp/guzzle": "~6.0",
+    "electrolinux/phpquery": "^0.9.6",
+    "php-webdriver/webdriver": "^1.12"
   }
 }
