@@ -1,6 +1,6 @@
 {
   "name": "ehua/tool",
-  "description": "description",
+  "description": "Ehua自用开发包",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
@@ -10,9 +10,10 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": ">=7.2",
     "guzzlehttp/guzzle": "~6.0",
     "electrolinux/phpquery": "^0.9.6",
     "php-webdriver/webdriver": "^1.12"
-  }
+  },
+  "prefer-stable": true
 }
