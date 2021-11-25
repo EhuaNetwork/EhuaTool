@@ -19,6 +19,8 @@
         }
     ],
     "autoload":{
-        "classmap":["phpQuery.php"]
+        "classmap":[
+          "phpQuery.php"
+        ]
     }
 }

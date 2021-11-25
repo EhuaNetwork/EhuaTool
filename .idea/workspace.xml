@@ -1,20 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="" />
+    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/EhuaTool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EhuaTool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.md" beforeDir="false" afterPath="$PROJECT_DIR$/1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caiji/Selenum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Selenum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caiji/phpquery-single/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/phpquery-single/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caiji/phpquery-single/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/phpquery-single/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caiji/phpquery-single/phpQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/phpquery-single/phpQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Caiji/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dama/Chaor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Chaor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dama/Chaoy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Chaoy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dama/Tujian.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Tujian.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Douyin/Tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Douyin/Tool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Douyin/案例/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Douyin/案例/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Douyin/案例/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Douyin/案例/Register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Douyin/案例/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Douyin/案例/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jiema/Feiyu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Feiyu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jiema/Miyun.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Miyun.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jiema/Sms168.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Sms168.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/H5Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/H5Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/JsServicce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/JsServicce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/NotifyService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/NotifyService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/ShareService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/ShareService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/UinfoServicce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/UinfoServicce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/Notify.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/Notify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/authorize.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/authorize.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/barcode.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/barcode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/h5.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/h5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/jsapi.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/jsapi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/native.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/native.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/native_v3.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/native_v3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/notify_v3.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/notify_v3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/orderquery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/orderquery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/redpack.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/redpack.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/refund.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/refund.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/refund_query.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/refund_query.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/reverse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/reverse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pay/WxPay/归档/transfers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/归档/transfers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tool/Tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tool/Tool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe/chromedriver75.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/exe/chromedriver75.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Ehua" />
       </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -29,8 +87,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -44,8 +113,38 @@
       <workItem from="1637383151169" duration="13000" />
       <workItem from="1637383178010" duration="594000" />
       <workItem from="1637383803860" duration="19000" />
-      <workItem from="1637383868689" duration="228000" />
+      <workItem from="1637383868689" duration="2453000" />
+      <workItem from="1637799047835" duration="348000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1637384271649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637384271649</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1637384558027</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637384558027</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1637384823634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637384823634</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init">
+      <created>1637385092002</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637385092002</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

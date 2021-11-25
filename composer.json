@@ -1,19 +1,27 @@
 {
-  "name": "Ehua/EhuaTool",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "ehua9",
-      "email": "email@example.com"
-    }
-  ],
+  "name": "ehua/tool",
+  "description": "Ehua自用工具包",
+  "keywords":["tool","ehua"],
+  "homepage": "http://github.ehua.pro",
   "require": {
-    "php": ">=7.0",
-    "topthink/framework": "5.0.*",
+    "php": ">=7.2",
     "guzzlehttp/guzzle": "~6.0",
     "electrolinux/phpquery": "^0.9.6",
     "php-webdriver/webdriver": "^1.12"
+  },
+  "suggest":{
+
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ehua",
+      "email": "ehua999@163.com"
+    }
+  ],
+  "autoload":{
+    "psr-4":{
+      "Ehua\\":"src"
+    }
   }
 }
