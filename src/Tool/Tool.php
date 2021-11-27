@@ -11,7 +11,7 @@ class Tool
      * @param string $encoding
      * @return string
      */
-    static function str_match_chinese($chars, $encoding = 'utf8')
+    static function str_To_chinese($chars, $encoding = 'utf8')
     {
         $pattern = ($encoding == 'utf8') ? '/[\x{4e00}-\x{9fa5}]/u' : '/[\x80-\xFF]/';
         preg_match_all($pattern, $chars, $result);
@@ -19,6 +19,11 @@ class Tool
         return $temp;
     }
 
+    /**
+     * 字符串转utf8编码
+     * @param $str
+     * @return string
+     */
     static function str_To_Utf8($str)
     {
         $encode = mb_detect_encoding($str, array("ASCII", 'UTF-8', "GB2312", "GBK", 'BIG5'));
@@ -29,6 +34,11 @@ class Tool
         }
     }
 
+    /**
+     * 字符串 转url格式
+     * @param $str
+     * @return mixed|string|string[]
+     */
     static function str_To_Url($str)
     {
         preg_match_all("/[\x{4e00}-\x{9fff}]+/u", $str, $matches);
@@ -40,6 +50,14 @@ class Tool
         return $str;
     }
 
+    /**
+     * 字符串加密
+     * @param $string
+     * @param string $key
+     * @param int $expiry
+     * @param string $default_key
+     * @return string|string[]
+     */
     static function str_encode($string, $key = '', $expiry = 0, $default_key = 'a!takA:dlmcldEv,e')
     {
         $ckeyLength = 4;
@@ -77,7 +95,6 @@ class Tool
         $result = str_replace(array('+', '/', '='), array('-', '_', '.'), $result);
         return $result;
     }
-
 
     /**
      * 字符解密，一次一密,可定时解密有效
