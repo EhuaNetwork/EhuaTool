@@ -9,10 +9,20 @@ use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverKeys;
 
+/**
+ * php-Selenum 操作类
+ * 相关文档  http://ask.sov5.cn/q/7598k2fKfn
+ * Class Selenum
+ * @package Ehua\Caiji
+ */
 class Selenum
 {
-    //相关文档  http://ask.sov5.cn/q/7598k2fKfn
 
+    /**
+     * 强制点击某个元素
+     * @param $driver
+     * @param $xpath
+     */
     static function click($driver, $xpath)
     {
         $driver->action()->moveToElement($driver->findElement(WebDriverBy::xpath($xpath)))->click()->perform();
@@ -70,21 +80,22 @@ class Selenum
         return $driver = RemoteWebDriver::create($host, $capabilities, 2000);
     }
 
-//    public function send_temp(){
-//
-//        $sessionid = 'c309b45d84a0e6deec146f8109f7df4e';
-//        $host = 'http://localhost:9515'; // this is the default
-//        //使用共享sessionid
-//        $driver = RemoteWebDriver::createBySessionID($sessionid, $host, 2000);
-//    }
-
-    static function init2($sessionid)
+    /**
+     * 启动已知的线程
+     * @param $sessionid
+     * @return mixed
+     */
+    static function Session_init($sessionid)
     {
         $host = 'http://localhost:9515'; // this is the default
         $driver = RemoteWebDriver::createBySessionID($sessionid, $host, 2000);
         return $driver;
     }
 
+    /**
+     * 生成随机UA
+     * @return string
+     */
     private function getua()
     {
         $data = [
@@ -114,6 +125,10 @@ class Selenum
         return $data[$rand];
     }
 
+    /**
+     * 设置cookie
+     * @param $driver
+     */
     static function setcookie($driver)
     {
 //        $driver->manage()->deleteAllCookies();//清空cookie
@@ -124,16 +139,29 @@ class Selenum
 //        ));
     }
 
+    /**
+     * 执行js脚本
+     * @param $driver
+     * @param $js
+     */
     static function js($driver, $js)
     {
         $driver->executeScript($js);
     }
 
+    /**
+     * 刷新页面
+     * @param $driver
+     */
     static function reload($driver)
     {
         $driver->navigate()->refresh();
     }
 
+    /**
+     * 按下键  下拉窗口
+     * @param $driver
+     */
     static function key_down($driver)
     {
         $driver->getKeyboard()->pressKey(WebDriverKeys::PAGE_DOWN);
@@ -157,8 +185,10 @@ class Selenum
         }
     }
 
-
-    //切换最后一个window
+    /**
+     * 切换最后一个window
+     * @param $driver
+     */
     static function switchToEndWindow($driver)
     {
 
@@ -170,7 +200,10 @@ class Selenum
         }
     }
 
-    //切换至第一个window
+    /**
+     * 切换至第一个window
+     * @param $driver
+     */
     static function switchToHomeWindow($driver)
     {
 
