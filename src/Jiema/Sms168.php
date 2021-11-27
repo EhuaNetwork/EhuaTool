@@ -1,47 +1,22 @@
 <?php
 
-namespace Jiema;
+namespace Ehua\Jiema;
 
 use GuzzleHttp\Client;
 
+/**
+ * sms168接码操作类
+ * Class Sms168
+ * @package Ehua\Jiema
+ */
 class Sms168
 {
-
-    /**
-     *
-
-    //项目id
-    $xmid = '01836';
-
-    $hei = '';
-    //SMS168 账号
-    $config = [
-    'name' => 'Ehua999',
-    'pwd' => '150638',
-    ];
-    //        '不限', '中国'  '英国', '泰国', '俄罗斯', '肯尼亚', '巴拿马', '越南', '乌干达', '马来西亚', '美国', '菲律宾', '巴西', '缅甸', '柬埔寨', '印度尼西亚'
-    $guojia = ['不限'];
-    $guojia = $guojia[rand(0, count($guojia) - 1)];
-
-
-    $jiema = new \Jiema\Sms168($config);
-    $phone = $jiema->getphone($xmid, $guojia, '不限', '不限', '实卡', $hei, 1, 1, '123');
-    var_dump($phone);
-    $res = $jiema->getsms($xmid, $phone[1]);
-    var_dump($res);
-    $res = $jiema->getdel($xmid, $phone[1]);
-    dd($res);
-
-     */
-
     /**
      *sms168 接码API
      * API调用一定要加延时过快访问会被锁号.
      * 统一返回 URL 编码字符，返回内容 请用 URL解码 可正常显示
      */
-
     public $token;
-
     public function __construct($config)
     {
         $url = "http://sms168.xyz:82/api/yonghu_login";
@@ -55,6 +30,7 @@ class Sms168
     }
 
     /**
+     * 获取账户余额
      * @return bool|string
      */
     public function getmoney()
@@ -69,6 +45,7 @@ class Sms168
     }
 
     /**
+     * 获取手机号
      * @param $xmid     项目id
      * @param $xzgj     国家       (支持:不限,中国,泰国,俄罗斯,英国,肯尼亚,巴拿马,越南,乌干达,马来西亚,美国,菲律宾,巴西,缅甸,柬埔寨,印度尼西亚)
      * @param $xzyys    运营商      (支持:不限,移动,联通,电信)
@@ -102,6 +79,7 @@ class Sms168
 
 
     /**
+     * 获取验证码
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -120,6 +98,7 @@ class Sms168
     }
 
     /**
+     * 释放手机号
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -138,6 +117,7 @@ class Sms168
     }
 
     /**
+     * 拉黑手机号
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -155,11 +135,6 @@ class Sms168
         return $res;
     }
 
-
-
-
-    // $url 是请求的链接
-// $postdata 是传输的数据，数组格式
     function post($url, $postdata)
     {
         $GUZZ = new Client();
@@ -172,4 +147,28 @@ class Sms168
         $data = explode('|', $data);
         return $data;
     }
+
+    /**
+            //项目id
+            $xmid = '01836';
+
+            $hei = '';
+            //SMS168 账号
+            $config = [
+            'name' => '',
+            'pwd' => '',
+            ];
+            //        '不限', '中国'  '英国', '泰国', '俄罗斯', '肯尼亚', '巴拿马', '越南', '乌干达', '马来西亚', '美国', '菲律宾', '巴西', '缅甸', '柬埔寨', '印度尼西亚'
+            $guojia = ['不限'];
+            $guojia = $guojia[rand(0, count($guojia) - 1)];
+
+
+            $jiema = new \Jiema\Sms168($config);
+            $phone = $jiema->getphone($xmid, $guojia, '不限', '不限', '实卡', $hei, 1, 1, '123');
+            var_dump($phone);
+            $res = $jiema->getsms($xmid, $phone[1]);
+            var_dump($res);
+            $res = $jiema->getdel($xmid, $phone[1]);
+            dd($res);
+     */
 }

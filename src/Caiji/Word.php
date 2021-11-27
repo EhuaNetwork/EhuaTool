@@ -7,6 +7,11 @@ namespace Ehua\Caiji;
 use Ehua\Tool\Tool;
 use GuzzleHttp\Client;
 
+/**
+ * 抓取常规网站数据方法 {列表+内页}
+ * Class Word
+ * @package Ehua\Caiji
+ */
 class Word
 {
     public $guzz;
@@ -18,6 +23,9 @@ class Word
         ]
     ];
 
+    /**
+     * 初始化入口
+     */
     public function init()
     {
         $this->guzz = new Client();
@@ -72,7 +80,7 @@ class Word
 
     }
 
-    public function makdir()
+    private function makdir()
     {
         if (!file_exists(ROOT_PATH . 'public' . DS . 'uploads' . DS)) {
             mkdir(ROOT_PATH . 'public' . DS . 'uploads' . DS);//这里会返回true
@@ -81,8 +89,7 @@ class Word
             mkdir(ROOT_PATH . 'public' . DS . 'uploads' . DS . 'sort' . DS);//这里会返回true
         }
     }
-
-    public function str_to_url($str)
+    private function str_to_url($str)
     {
         preg_match_all("/[\x{4e00}-\x{9fff}]+/u", $str, $matches);
         if (!empty($matches[0])) {
@@ -92,8 +99,7 @@ class Word
         }
         return $str;
     }
-
-    public function getbody($domain, $url)
+    private function getbody($domain, $url)
     {
         $this->makdir();
 

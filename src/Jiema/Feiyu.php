@@ -1,53 +1,22 @@
 <?php
 
-namespace Jiema;
+namespace Ehua\Jiema;
 
 use GuzzleHttp\Client;
 
+/**
+ * 飞鱼接码操作类
+ * Class Feiyu
+ * @package Jiema
+ */
 class Feiyu
 {
-
-    /**
-     * 调用
-
-    //项目id
-    $xmid='01836';
-
-    $hei='';
-    //飞鱼账号
-    $config = [
-    'name' => 'Ehua999',
-    'pwd' => '150638',
-    ];
-    //        '不限', '中国',
-    $guojia=[ '泰国','俄罗斯','英国','肯尼亚','巴拿马','越南','乌干达','马来西亚','美国','菲律宾','巴西','缅甸','柬埔寨','印度尼西亚'];
-    $guojia= $guojia[rand(0,count($guojia)-1)];
-
-
-
-    $jiema = new \Jiema\Feiyu($config);
-    $res = $jiema->getphone($xmid,$guojia,'不限','不限','不限',$hei,2,1,'123');
-
-
-     *
-     */
-
-
-
-
-
-
-
-
-
-
 
     /**
      *飞鱼接码API
      * API调用一定要加延时过快访问会被锁号.
      * 统一返回 URL 编码字符，返回内容 请用 URL解码 可正常显示
      */
-
     public $token;
 
     public function __construct($config)
@@ -63,6 +32,7 @@ class Feiyu
     }
 
     /**
+     * 获取账户余额
      * @return bool|string
      */
     public function getmoney()
@@ -77,6 +47,7 @@ class Feiyu
     }
 
     /**
+     * 获取手机号
      * @param $xmid     项目id
      * @param $xzgj     国家       (支持:不限,中国,泰国,俄罗斯,英国,肯尼亚,巴拿马,越南,乌干达,马来西亚,美国,菲律宾,巴西,缅甸,柬埔寨,印度尼西亚)
      * @param $xzyys    运营商      (支持:不限,移动,联通,电信)
@@ -108,8 +79,8 @@ class Feiyu
         return $res;
     }
 
-
     /**
+     * 获取验证码
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -128,6 +99,7 @@ class Feiyu
     }
 
     /**
+     * 释放手机号
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -146,6 +118,7 @@ class Feiyu
     }
 
     /**
+     * 拉黑号码
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -164,11 +137,7 @@ class Feiyu
     }
 
 
-
-
-    // $url 是请求的链接
-// $postdata 是传输的数据，数组格式
-    function post($url, $postdata)
+    private function post($url, $postdata)
     {
         $GUZZ = new Client();
 
@@ -180,4 +149,25 @@ class Feiyu
         $data = explode('|', $data);
         return $data;
     }
+
+
+    /**
+     * 调用实例
+    $xmid='01836';
+
+    $hei='';
+    $config = [
+    'name' => '',
+    'pwd' => '',
+    ];
+    $guojia=[ '泰国','俄罗斯','英国','肯尼亚','巴拿马','越南','乌干达','马来西亚','美国','菲律宾','巴西','缅甸','柬埔寨','印度尼西亚'];
+    $guojia= $guojia[rand(0,count($guojia)-1)];
+
+    $jiema = new \Jiema\Feiyu($config);
+    $res = $jiema->getphone($xmid,$guojia,'不限','不限','不限',$hei,2,1,'123');
+
+     */
+
+
+
 }

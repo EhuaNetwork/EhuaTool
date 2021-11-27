@@ -1,47 +1,24 @@
 <?php
 
-namespace Jiema;
+namespace Ehua\Jiema;
 
 use GuzzleHttp\Client;
 
+/**
+ * 米云打码
+ * Class Miyun
+ * @package Jiema
+ */
 class Miyun
 {
 
 
     /**
-
-    //项目id
-    $xmid = '14016';
-
-    $hei = '';
-    //米云账号
-    $config = [
-    'name' => 'MY.231220714',
-    'pwd' => '150638',
-    ];
-
-
-    $glhmd = '162,165,163,166,167,169,171,170,172,175,173,177,179';
-    $jiema = new \Jiema\Miyun($config);
-    sleep(10);
-
-    $res = $jiema->getphone($xmid, '', '', 0, $glhmd, '', 'ehua999');
-    var_dump($res);
-    sleep(10);
-    $res = $jiema->getdel($xmid,$res['mobile']);
-
-     */
-
-
-
-    /**
-     *飞鱼接码API  http://www.miyun.pro/api.html
+     *米云接码API  http://www.miyun.pro/api.html
      * API调用一定要加延时过快访问会被锁号.
      * 统一返回 URL 编码字符，返回内容 请用 URL解码 可正常显示
      */
-
     public $token;
-
     public $domain = "http://api.miyun.pro/";
 
     public function __construct($config)
@@ -56,6 +33,7 @@ class Miyun
     }
 
     /**
+     * 获取账户余额
      * @return bool|string
      */
     public function getmoney()
@@ -69,6 +47,7 @@ class Miyun
     }
 
     /**
+     * 获取手机号
      * @param $xmid         项目编号
      * @param $scope        指定号段查询 (譬如:137开头的号段或者1371开头的号段),最多支持20个号段。用逗号分隔 比如150,1501,1502
      * @param $xzsf         归属地选择 例如 湖北 甘肃 不需要带省、市字样
@@ -78,7 +57,7 @@ class Miyun
      * @param $kfz          开发者返现账号（请填写登录的用户名）
      * @return false|string[]
      */
-    public function getphone($xmid, $scope,  $xzsf, $hmlx, $glhmd, $qhsl, $kfz)
+    public function getphone($xmid, $scope, $xzsf, $hmlx, $glhmd, $qhsl, $kfz)
     {
 
         $url = $this->domain . "api/get_mobile";
@@ -99,8 +78,8 @@ class Miyun
         return $res;
     }
 
-
     /**
+     * 获取验证码
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -120,6 +99,7 @@ class Miyun
     }
 
     /**
+     * 释放手机号
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -138,6 +118,7 @@ class Miyun
     }
 
     /**
+     * 拉黑号码
      * @param $xmid 项目id
      * @param $sjhm 手机号码
      * @return bool|string
@@ -155,12 +136,7 @@ class Miyun
         return $res;
     }
 
-
-
-
-    // $url 是请求的链接
-// $postdata 是传输的数据，数组格式
-    function post($url, $postdata)
+    private function post($url, $postdata)
     {
         $GUZZ = new Client();
 
@@ -168,7 +144,29 @@ class Miyun
             'query' => $postdata,
         ])->getBody();
         $data = (string)$data;
-        $data = json_decode($data,true);
+        $data = json_decode($data, true);
         return $data;
     }
+    /**
+     * //项目id
+     * $xmid = '14016';
+     *
+     * $hei = '';
+     * //米云账号
+     * $config = [
+     * 'name' => 'MY.231220714',
+     * 'pwd' => '',
+     * ];
+     *
+     *
+     * $glhmd = '162,165,163,166,167,169,171,170,172,175,173,177,179';
+     * $jiema = new \Jiema\Miyun($config);
+     * sleep(10);
+     *
+     * $res = $jiema->getphone($xmid, '', '', 0, $glhmd, '', 'ehua999');
+     * var_dump($res);
+     * sleep(10);
+     * $res = $jiema->getdel($xmid,$res['mobile']);
+     */
+
 }

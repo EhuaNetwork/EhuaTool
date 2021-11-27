@@ -11,8 +11,12 @@ namespace Ehua\Dama;
 class Chaoy
 {
 
-//查询题分
-//返回样例:{"err_no":0,"err_str":"OK","tifen":821690,"tifen_lock":0}
+    /**
+     * 查询题分
+     * @param $user
+     * @param $pass
+     * @return bool|string  返回样例:{"err_no":0,"err_str":"OK","tifen":821690,"tifen_lock":0}
+     */
     function CJY_GetScore($user,$pass){
         $url = 'http://code.chaojiying.net/Upload/GetScore.php' ;
         $fields = array(
@@ -34,8 +38,15 @@ class Chaoy
         return $result ;
     }
 
-//识别验证码
-//返回样例:{"err_no":0,"err_str":"OK","pic_id":1662228516102,"pic_str":"8vka","md5":"35d5c7f6f53223fbdc5b72783db0c2c0","str_debug":""}
+    /**
+     * 识别验证码
+     * @param $user
+     * @param $pass
+     * @param $softid
+     * @param $codetype
+     * @param $userfile
+     * @return bool|string 返回样例:{"err_no":0,"err_str":"OK","pic_id":1662228516102,"pic_str":"8vka","md5":"35d5c7f6f53223fbdc5b72783db0c2c0","str_debug":""}
+     */
     function CJY_RecognizeBytes($user,$pass,$softid,$codetype,$userfile){
         $url = 'http://upload.chaojiying.net/Upload/Processing.php' ;
         $fields = array(
@@ -61,7 +72,16 @@ class Chaoy
 
         return $result ;
     }
-//发送 base64字符串
+
+    /**
+     * 发送 base64字符串
+     * @param $user
+     * @param $pass
+     * @param $softid
+     * @param $codetype
+     * @param $base64_str
+     * @return bool|string
+     */
     function CJY_Post_base64($user,$pass,$softid,$codetype,$base64_str){
         $url = 'http://upload.chaojiying.net/Upload/Processing.php' ;
         $fields = array(
@@ -86,8 +106,14 @@ class Chaoy
         return $result ;
     }
 
-//报告错误,只在验证码识别结果是错误的时候使用该函数
-//返回样例:{"err_no":0,"err_str":"OK"}
+    /**
+     * 报告错误,只在验证码识别结果是错误的时候使用该函数
+     * @param $user
+     * @param $pass
+     * @param $PicId
+     * @param $SoftId
+     * @return bool|string 返回样例:{"err_no":0,"err_str":"OK"}
+     */
     function CJY_ReportError($user,$pass,$PicId,$SoftId){
         $url = 'http://code.chaojiying.net/Upload/ReportError.php' ;
         $fields = array(

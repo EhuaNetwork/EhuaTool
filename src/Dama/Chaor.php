@@ -2,14 +2,19 @@
 
 namespace Ehua\Dama;
 /**
- * 超人打码 http://www.chaorendama.com/
+ * 超人打码操作类 http://www.chaorendama.com/
  * Class Chaor
  * @package Ehua\Dama
  */
 class Chaor
 {
 
-    //查询剩余点数
+    /**
+     * 查询剩余点数
+     * @param $user     用户名
+     * @param $pass     密码
+     * @return bool|string
+     */
     function get_info($user, $pass)
     {
         $http = curl_init();
@@ -22,7 +27,14 @@ class Chaor
         return $data;
     }
 
-    //识别图片文字
+    /**
+     * 识别图片文字
+     * @param $user     用户名
+     * @param $pass     密码
+     * @param $softid   识别类型
+     * @param $imgdata  图片数据
+     * @return bool|string
+     */
     function recv_byte($user, $pass, $softid, $imgdata)
     {
         $http = curl_init();
@@ -35,7 +47,13 @@ class Chaor
         return $data;
     }
 
-    //报告错误,只在返回识别结果且识别错误时，使用该函数
+    /**
+     * 报告错误,只在返回识别结果且识别错误时，使用该函数
+     * @param $user
+     * @param $pass
+     * @param $imgid
+     * @return bool|string
+     */
     function report_err($user, $pass, $imgid)
     {
         $http = curl_init();

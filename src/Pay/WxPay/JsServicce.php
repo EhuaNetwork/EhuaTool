@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Pay\WxPay;
+namespace Ehua\WxPay;
 
 
 class JsServicce

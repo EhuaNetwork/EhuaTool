@@ -1,5 +1,5 @@
 <?php
-namespace Pay\WxPay;
+namespace Ehua\WxPay;
 
 class H5Service
 {

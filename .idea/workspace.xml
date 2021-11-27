@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="" />
+    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="新增文章采集操作类">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Caiji/Word.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Word.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dama/Chaor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Chaor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dama/Chaoy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Chaoy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dama/Tujian.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dama/Tujian.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Douyin/Tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Douyin/Tool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jiema/Feiyu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Feiyu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jiema/Miyun.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Miyun.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jiema/Sms168.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jiema/Sms168.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/WxPay/H5Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/H5Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/WxPay/JsServicce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/JsServicce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/WxPay/NotifyService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/NotifyService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/WxPay/ShareService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/ShareService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pay/WxPay/UinfoServicce.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pay/WxPay/UinfoServicce.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +87,8 @@
       <workItem from="1637383178010" duration="594000" />
       <workItem from="1637383803860" duration="19000" />
       <workItem from="1637383868689" duration="2453000" />
-      <workItem from="1637799047835" duration="493000" />
+      <workItem from="1637799047835" duration="1523000" />
+      <workItem from="1637994018496" duration="4139000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -109,7 +125,35 @@
       <option name="project" value="LOCAL" />
       <updated>1637799470193</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <created>1637799597448</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637799597448</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加字符串转url编码方法">
+      <created>1637995119698</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637995119698</updated>
+    </task>
+    <task id="LOCAL-00008" summary="新增文章采集操作类">
+      <created>1637996831925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637996831925</updated>
+    </task>
+    <task id="LOCAL-00009" summary="优化注释">
+      <created>1637997301368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637997301369</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +161,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="增加字符串转url编码方法" />
+    <MESSAGE value="新增文章采集操作类" />
+    <MESSAGE value="优化注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化注释" />
   </component>
 </project>

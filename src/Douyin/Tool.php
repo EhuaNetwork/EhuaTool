@@ -11,55 +11,19 @@ use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 
+/**
+ * 【案例】抖音采集  2021.10
+ * Class Tool
+ * @package Ehua\Douyin
+ */
 class Tool
 {
 
+
     /**
-     * 抖音过验证码
-     * 原理：
-     * 截屏获得验证码界面
-     * 接口识别滑块坐标偏移量
-     * 由于直接滑动导致验证失败，所有分五次滑动到偏移量的位置
-     * @param $driver
+     * 初始化入口
+     * @return mixed
      */
-    static function isyzm($driver)
-    {
-        if ($driver->getTitle() == '验证码中间页' || Selenum::isset($driver, WebDriverBy::id('captcha_container'))) {
-            $file_dir = "test2.jpg";
-            //截屏
-            sleep(1);
-            $driver->takeScreenshot($file_dir);
-            sleep(1);//扫码 5秒后执行获取cookie
-            \Ehua\Tool\Tool::image_thumb($file_dir, 335, 200, 0, 1, 426, 224);
-
-            $cfg = \db('dm')->where('id', 1)->find();
-            $r = Tujian::init($file_dir, $cfg);
-            if ($r <= 0) {
-                dd('验证码出错');
-            }
-            $r = (int)$r;
-
-            //获得坐标偏移量  分5词移动至目标点
-
-            $temp = $r / 5;
-            $temp = (int)$temp;
-
-            for ($i = 0; $i < 5; $i++) {
-                $driver->action()->clickAndHold($driver->findElement(WebDriverBy::xpath('//*[@id="secsdk-captcha-drag-wrapper"]/div[2]')))
-                    ->moveByOffset($temp, 0)->perform();
-                usleep(30);
-            }
-            //松开鼠标
-            $driver->action()->release()->perform();
-            //一次性滑动值偏移量位置
-//            $r= $driver->action()->dragAndDropBy($driver->findElement(WebDriverBy::xpath('//*[@id="secsdk-captcha-drag-wrapper"]/div[2]')),$r,0)->perform();
-                        $driver->executeScript("
-            document.getElementById('captcha_container').remove()
-            ");
-            sleep(3);
-        }
-    }
-
     static function init()
     {
         header("Content-Type: text/html; charset=UTF-8");
@@ -106,6 +70,52 @@ class Tool
 
         //隐性设置15秒
         return $driver = RemoteWebDriver::create($host, $capabilities, 2000);
+    }
+
+    /**
+     * 抖音过验证码
+     * 原理：
+     * 截屏获得验证码界面
+     * 接口识别滑块坐标偏移量
+     * 由于直接滑动导致验证失败，所有分五次滑动到偏移量的位置
+     * @param $driver
+     */
+    static function isyzm($driver)
+    {
+        if ($driver->getTitle() == '验证码中间页' || Selenum::isset($driver, WebDriverBy::id('captcha_container'))) {
+            $file_dir = "test2.jpg";
+            //截屏
+            sleep(1);
+            $driver->takeScreenshot($file_dir);
+            sleep(1);//扫码 5秒后执行获取cookie
+            \Ehua\Tool\Tool::image_thumb($file_dir, 335, 200, 0, 1, 426, 224);
+
+            $cfg = \db('dm')->where('id', 1)->find();
+            $r = Tujian::init($file_dir, $cfg);
+            if ($r <= 0) {
+                dd('验证码出错');
+            }
+            $r = (int)$r;
+
+            //获得坐标偏移量  分5词移动至目标点
+
+            $temp = $r / 5;
+            $temp = (int)$temp;
+
+            for ($i = 0; $i < 5; $i++) {
+                $driver->action()->clickAndHold($driver->findElement(WebDriverBy::xpath('//*[@id="secsdk-captcha-drag-wrapper"]/div[2]')))
+                    ->moveByOffset($temp, 0)->perform();
+                usleep(30);
+            }
+            //松开鼠标
+            $driver->action()->release()->perform();
+            //一次性滑动值偏移量位置
+//            $r= $driver->action()->dragAndDropBy($driver->findElement(WebDriverBy::xpath('//*[@id="secsdk-captcha-drag-wrapper"]/div[2]')),$r,0)->perform();
+            $driver->executeScript("
+            document.getElementById('captcha_container').remove()
+            ");
+            sleep(3);
+        }
     }
 
 
@@ -155,6 +165,11 @@ class Tool
 
     }
 
+    /**
+     * 设置cookie
+     * @param $driver
+     * @param $cookies
+     */
     static function setcookie($driver, $cookies)
     {
         $driver->manage()->deleteAllCookies();//清空cookie
