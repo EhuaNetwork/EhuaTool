@@ -28,16 +28,18 @@ class Tool
             return mb_convert_encoding($str, 'UTF-8', $encode);
         }
     }
-   static function str_To_Url($str)
-    }
-        preg_match_all("/[\x{4e00}-\x{9fff}]+/u", $str,$matches);
-            if(!empty($matches[0])){
-                for($i=0;$i<count($matches[0]);$i++){
-                    $str=str_replace($matches[0][$i],urlencode($matches[0][$i]),$str);
-                }
+
+    static function str_To_Url($str)
+    {
+        preg_match_all("/[\x{4e00}-\x{9fff}]+/u", $str, $matches);
+        if (!empty($matches[0])) {
+            for ($i = 0; $i < count($matches[0]); $i++) {
+                $str = str_replace($matches[0][$i], urlencode($matches[0][$i]), $str);
             }
-return $str;
-}
+        }
+        return $str;
+    }
+
     static function str_encode($string, $key = '', $expiry = 0, $default_key = 'a!takA:dlmcldEv,e')
     {
         $ckeyLength = 4;
