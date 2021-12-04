@@ -12,7 +12,7 @@ use GuzzleHttp\Client;
  * Class Word
  * @package Ehua\Caiji
  */
-class Word
+class Caiji 
 {
     public $guzz;
 
@@ -23,19 +23,32 @@ class Word
         ]
     ];
 
+
+    /**
+     * 是否包含域名
+     * @param $domainm
+     */
+    private function is_domain($domain,$url){
+        if (substr($url, 0, 1) == '\\' || substr($url, 0, 1) == '/') {
+            $new_url = $domain . ($url);
+        } else {
+            $new_url = $url;
+        }
+        return $new_url;
+    }
     /**
      * 初始化入口
      */
     public function init()
     {
+        die;
         $this->guzz = new Client();
 
-        $domain = "http://www.fuermajiaju.com";
+        $domain = "http://zhitui.xunshangbao.cn";
 
-        $tt = 145;
+        $tt = 159;
         $ii = null;
-        $p = '/product-54show.html';
-
+        $p = '/com/qingquan1/sell/typeid-609.html';
 
         $res = (string)$this->guzz->get($domain . $p)->getBody();
 
@@ -46,16 +59,13 @@ class Word
         $res = \phpQuery::newDocument($res);
         $data = [];
         \phpQuery::selectDocument($res);
-        $count = pq('body')->find('.prolist')->find('a');
-        $b = pq('body')->find('.prolist')->find('a');
+        $count = pq('body')->find('.row')->eq(4)->find('.common-item');
+        $b = pq('body')->find('.row')->eq(4)->find('.common-item');
         for ($i = 0; $i < count($count); $i++) {
-            $url = $domain . $b->eq($i)->attr('href');
-            $img = $domain . $b->eq($i)->find('img')->attr('src');
-            if (substr($img, 0, 1) == '\\') {
-                $img = $domain . ($img);
-            } else {
-                $img = $img;
-            }
+            $url =$this->is_domain( $domain , $b->eq($i)->find('a')->attr('href'));
+            $img = $this->is_domain( $domain , $b->eq($i)->find('img')->attr('src'));
+            $name =  trim($b->eq($i)->find('.title')->text());
+
             $img=$this->str_to_url($img);
 
 
@@ -68,14 +78,13 @@ class Word
             $data['type'] = $tt;
             $body = $this->getbody($domain, $url);
             $data['body'] = $body['body'];
-            $data['name'] = $body['name'];
+            $data['name'] =$name;
 
             //TODO 重置id
 //            preg_match("/\d+/", $url, $data[$i]['id']);
 //            $data[$i]['id'] = $data[$i]['id'][0];
             \phpQuery::selectDocument($res);
             db('article')->insert($data);
-            die;
         }
 
     }
@@ -110,16 +119,17 @@ class Word
 
         $res = \phpQuery::newDocument($res);
         \phpQuery::selectDocument($res);
-        $imgs = pq('.dprochanpin_2_2')->find('img');
-        $body = pq('.dprochanpin_2_2')->html();
+
+
+        $imgs = pq('.content')->find('img');
+        $body = pq('.content')->html();
+        $data['name'] = pq('#big_div')->text();
         //去除所有img
         for ($i = 0; $i < $imgs->count(); $i++) {
             $temp_img = $imgs->eq($i)->attr('src');
-            if (substr($temp_img, 0, 1) == '\\' || substr($temp_img, 0, 1) == '/') {
-                $img = $domain . ($temp_img);
-            } else {
-                $img = $temp_img;
-            }
+
+            $img=$this->is_domain( $domain , $temp_img);
+
 
             $img=$this->str_to_url($img);
 
@@ -130,7 +140,6 @@ class Word
         }
 
         $data['body'] = $body;
-        $data['name'] = pq('.dprochanpin_2_1')->text();;
 
         return $data;
     }
