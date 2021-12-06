@@ -12,7 +12,7 @@ use GuzzleHttp\Client;
  * Class Word
  * @package Ehua\Caiji
  */
-class Caiji 
+class Caiji
 {
     public $guzz;
 
