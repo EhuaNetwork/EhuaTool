@@ -16,7 +16,7 @@ class Tool
         $temp = array_pop($path);
         $path = implode('/', $path);
         self::dir_create($path);
-        file_put_contents($path . '/' . $temp . '.html', $body);
+        file_put_contents($path . '/' . $temp , $body);
     }
 
     /**
