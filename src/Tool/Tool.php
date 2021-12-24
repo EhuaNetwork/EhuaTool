@@ -6,6 +6,34 @@ class Tool
 {
 
     /**
+     * file_put_contents 优化版 自动创建目录
+     * @param $path
+     * @param $body
+     */
+    static function file_put_contents_ehua($path, $body)
+    {
+        $path = explode('/', $path);
+        $temp = array_pop($path);
+        $path = implode('/', $path);
+        self::dir_create($path);
+        file_put_contents($path . '/' . $temp . '.html', $body);
+    }
+
+    /**
+     * 递归创建文件目录
+     * @param $dir
+     */
+    static function dir_create($dir)
+    {
+        if (is_dir($dir) || @mkdir($dir, 0777)) {
+        } else {
+            self::dir_create(dirname($dir));
+            if (@mkdir($dir, 0777)) {
+            }
+        }
+    }
+
+    /**
      * 只取中文
      * @param $chars
      * @param string $encoding
