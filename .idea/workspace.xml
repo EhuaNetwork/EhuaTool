@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/EhuaTool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EhuaTool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
@@ -89,7 +88,7 @@
       <workItem from="1640400826984" duration="5000" />
       <workItem from="1640408310400" duration="72000" />
       <workItem from="1640418902568" duration="14000" />
-      <workItem from="1640419354629" duration="246000" />
+      <workItem from="1640419354629" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -238,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640419554370</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="更新1">
+      <created>1640419607741</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640419607741</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
