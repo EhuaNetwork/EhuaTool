@@ -24,7 +24,7 @@ class Tool
      * @param $file_path
      * @return array
      */
-    function file_to_array($file_path)
+    static function file_to_array($file_path)
     {
         $file = $fp = fopen($file_path, 'r') or die("Unable to open file!");
         while (!feof($file)) {

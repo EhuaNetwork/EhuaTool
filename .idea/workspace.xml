@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Caiji/Word.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Word.php" afterDir="false" />
+    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="更新1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tool/Tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tool/Tool.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +81,10 @@
       <workItem from="1638151971106" duration="1584000" />
       <workItem from="1638169147785" duration="2062000" />
       <workItem from="1638582660740" duration="100000" />
+      <workItem from="1638774942008" duration="314000" />
+      <workItem from="1640333915735" duration="125000" />
+      <workItem from="1640334348424" duration="105000" />
+      <workItem from="1640394717327" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -172,7 +177,35 @@
       <option name="project" value="LOCAL" />
       <updated>1638582729416</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="更新1">
+      <created>1638774968213</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1638774968213</updated>
+    </task>
+    <task id="LOCAL-00015" summary="更新1">
+      <created>1640334026731</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1640334026731</updated>
+    </task>
+    <task id="LOCAL-00016" summary="更新1">
+      <created>1640334391560</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1640334391560</updated>
+    </task>
+    <task id="LOCAL-00017" summary="更新1">
+      <created>1640394800201</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1640394800202</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +217,7 @@
     <MESSAGE value="新增文章采集操作类" />
     <MESSAGE value="优化注释" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="更新1" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新1" />
   </component>
 </project>
