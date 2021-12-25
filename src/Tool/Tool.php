@@ -20,6 +20,24 @@ class Tool
     }
 
     /**
+     * 获取文件数组
+     * @param $file_path
+     * @return array
+     */
+    function file_to_array($file_path)
+    {
+        $file = $fp = fopen($file_path, 'r') or die("Unable to open file!");
+        while (!feof($file)) {
+            $fp = fgets($file);
+            if ($fp) {
+                $content[] = $fp;
+            }
+        }
+
+        fclose($file);
+        return $content;
+    }
+    /**
      * 递归创建文件目录
      * @param $dir
      */
