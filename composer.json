@@ -8,7 +8,7 @@
     "guzzlehttp/guzzle": "~6.0",
     "electrolinux/phpquery": "^0.9.6",
     "php-webdriver/webdriver": "^1.12",
-    "symfony/var-dumper": "v3.4.x-dev"
+    "symfony/var-dumper": "~3.4.x"
   },
   "suggest":{
 
