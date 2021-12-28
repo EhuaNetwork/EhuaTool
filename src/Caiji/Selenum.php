@@ -8,7 +8,7 @@ use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverKeys;
-
+use Facebook\WebDriver\WebDriverSelect;
 /**
  * php-Selenum 操作类
  * 相关文档  http://ask.sov5.cn/q/7598k2fKfn
@@ -18,6 +18,13 @@ use Facebook\WebDriver\WebDriverKeys;
 class Selenum
 {
 
+    static function setSelect($driver,$xpath){
+        $elm = $driver->findElement(
+            $xpath
+        );
+        $selectAcao = new WebDriverSelect($elm);
+        $selectAcao->selectByValue("CN");
+    }
     /**
      * 强制点击某个元素
      * @param $driver
@@ -25,7 +32,7 @@ class Selenum
      */
     static function click($driver, $xpath)
     {
-        $driver->action()->moveToElement($driver->findElement(WebDriverBy::xpath($xpath)))->click()->perform();
+        $driver->action()->moveToElement($driver->findElement($xpath))->click()->perform();
     }
 
     static function getcookie($driver){
@@ -150,7 +157,7 @@ class Selenum
         return $data[$rand];
     }
 
-  
+
 
     /**
      * 执行js脚本
