@@ -28,6 +28,31 @@ class Selenum
         $driver->action()->moveToElement($driver->findElement(WebDriverBy::xpath($xpath)))->click()->perform();
     }
 
+    static function getcookie($driver){
+        $cookies = $driver->manage()->getCookies();
+        $cook = '';
+        foreach ($cookies as $c) {
+            $cook .= $c['name'] . '=' . $c['value'];
+            $cook .= ';';
+        }
+        return $cook;
+    }
+    static function setcookie($driver, $cookies)
+    {
+        $cookies = explode(';', $cookies);
+        $driver->manage()->deleteAllCookies();//清空cookie
+        //设置cookie
+        $cookies = array_filter($cookies);
+        foreach ($cookies as $co) {
+            $temp = explode('=', $co);
+            $driver->manage()->addCookie([
+                'name' => $temp[0],
+                'value' => $temp[1],
+            ]);
+        }
+    }
+
+
     /**
      * 初始化方法
      * @return RemoteWebDriver
@@ -125,19 +150,7 @@ class Selenum
         return $data[$rand];
     }
 
-    /**
-     * 设置cookie
-     * @param $driver
-     */
-    static function setcookie($driver)
-    {
-//        $driver->manage()->deleteAllCookies();//清空cookie
-//        //设置cookie
-//        $driver->manage()->addCookie(array(
-//            'name' => 'uid_tt_ss',
-//            'value' => '346727e8e746b23276cbe1bc628b4b85',
-//        ));
-    }
+  
 
     /**
      * 执行js脚本

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Caiji/Selenum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Selenum.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/wwwroot/256tiancheng.c" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Caiji" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,7 +58,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\Caiji" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\exe" />
       <recent name="C:\Users\ehua9\Desktop\EhuaTool\src" />
     </key>
   </component>
@@ -89,6 +94,12 @@
       <workItem from="1640418902568" duration="14000" />
       <workItem from="1640419354629" duration="2022000" />
       <workItem from="1640564034578" duration="1250000" />
+      <workItem from="1640599160258" duration="632000" />
+      <workItem from="1640652340544" duration="149000" />
+      <workItem from="1640652518554" duration="21000" />
+      <workItem from="1640652848632" duration="10000" />
+      <workItem from="1640652880205" duration="155000" />
+      <workItem from="1640654718821" duration="258000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -279,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640422268526</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="更新1">
+      <created>1640599287131</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1640599287131</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
