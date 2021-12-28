@@ -12,6 +12,7 @@ use Facebook\WebDriver\WebDriverSelect;
 /**
  * php-Selenum 操作类
  * 相关文档  http://ask.sov5.cn/q/7598k2fKfn
+ * 环境下载地址：https://www.aliyundrive.com/s/sKFF23PN8Kq
  * Class Selenum
  * @package Ehua\Caiji
  */
