@@ -19,12 +19,12 @@ use Facebook\WebDriver\WebDriverSelect;
 class Selenum
 {
 
-    static function setSelect($driver,$xpath){
+    static function setSelect($driver,$xpath,$value){
         $elm = $driver->findElement(
             $xpath
         );
         $selectAcao = new WebDriverSelect($elm);
-        $selectAcao->selectByValue("CN");
+        $selectAcao->selectByValue($value);
     }
     /**
      * 强制点击某个元素
@@ -87,8 +87,8 @@ class Selenum
         //linux 兼容
         $options->addArguments(["--no-sandbox"]);
         $options->addArguments(["--disable-gpu"]);
-       $options->addArguments(["blink-settings=imagesEnabled=false"]);//图片加载
-        $options->addArguments(["--headless"]);
+//       $options->addArguments(["blink-settings=imagesEnabled=false"]);//图片加载
+//        $options->addArguments(["--headless"]);
         //设置窗口大小
         $options->addArguments(['window-size=1200,768']);
         // 禁用SSL证书
