@@ -17,5 +17,5 @@ class Layuimini
         $temp = request()->param($key);
         $temp = json_decode($temp, true);
         return array_filter($temp);
-    }
+    } 
 }
