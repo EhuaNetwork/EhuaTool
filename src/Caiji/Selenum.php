@@ -10,6 +10,7 @@ use Facebook\WebDriver\Remote\WebDriverCapabilityType;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverKeys;
 use Facebook\WebDriver\WebDriverSelect;
+
 /**
  * php-Selenum 操作类
  * 相关文档  http://ask.sov5.cn/q/7598k2fKfn
@@ -20,13 +21,15 @@ use Facebook\WebDriver\WebDriverSelect;
 class Selenum
 {
 
-    static function setSelect($driver,$xpath,$value){
+    static function setSelect($driver, $xpath, $value)
+    {
         $elm = $driver->findElement(
             $xpath
         );
         $selectAcao = new WebDriverSelect($elm);
         $selectAcao->selectByValue($value);
     }
+
     /**
      * 强制点击某个元素
      * @param $driver
@@ -37,7 +40,8 @@ class Selenum
         $driver->action()->moveToElement($driver->findElement($xpath))->click()->perform();
     }
 
-    static function getcookie($driver){
+    static function getcookie($driver)
+    {
         $cookies = $driver->manage()->getCookies();
         $cook = '';
         foreach ($cookies as $c) {
@@ -46,6 +50,7 @@ class Selenum
         }
         return $cook;
     }
+
     static function setcookie($driver, $cookies)
     {
         $cookies = explode(';', $cookies);
@@ -66,7 +71,7 @@ class Selenum
      * 初始化方法
      * @return RemoteWebDriver
      */
-    static function init()
+    static function init($prox = null)
     {
         header("Content-Type: text/html; charset=UTF-8");
 // start Firefox with 5 second timeout
@@ -75,19 +80,23 @@ class Selenum
 //这里使用的是chrome浏览器进行测试，需到http://www.seleniumhq.org/download/上下载对应的浏览器测试插件
 //我这里下载的是win32 Google Chrome Driver 2.25版：https://chromedriver.storage.googleapis.com/index.html?path=2.25/
 
-        $capabilities = DesiredCapabilities::chrome();
-        //代理ip http://www.kxdaili.com/dailiip/2/1.html
-//        $proxyUrl = '101.132.227.173:8080';
-//        $capabilities = new DesiredCapabilities([
-//
-//            WebDriverCapabilityType::BROWSER_NAME => 'chrome',
-//            WebDriverCapabilityType::PROXY => [
-//                'proxyType' => 'manual',
-//                'httpProxy' => $proxyUrl,
-//                'sslProxy' => $proxyUrl,
-//            ]
-//        ]);
-//header头
+        if ($prox) {
+            //代理ip http://www.kxdaili.com/dailiip/2/1.html
+            $proxyUrl = $prox;
+            $capabilities = new DesiredCapabilities([
+
+                WebDriverCapabilityType::BROWSER_NAME => 'chrome',
+                WebDriverCapabilityType::PROXY => [
+                    'proxyType' => 'manual',
+                    'httpProxy' => $proxyUrl,
+                    'sslProxy' => $proxyUrl,
+                ]
+            ]);
+        } else {
+            $capabilities = DesiredCapabilities::chrome();
+        }
+
+        //header头
         $useragent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36';
         $options = new ChromeOptions();
         //设置ua
@@ -103,13 +112,9 @@ class Selenum
 //        $options->addArguments(["--headless"]);
         //设置窗口大小
         $options->addArguments(['window-size=1200,768']);
-        // 禁用SSL证书
-        $capabilities->setCapability('acceptSslCerts', false);
-        //无头
-        $capabilities->setCapability('ChromeOptions', ['args' => ['-headless']]);
 
 
-        $capabilities->setCapability(ChromeOptions::CAPABILITY, $options);
+
 
         //浏览器设置不加载图片
 //        $value = ['profile.managed_default_content_settings.images' => 2];
@@ -119,8 +124,13 @@ class Selenum
         //防检测
         $options->setExperimentalOption('excludeSwitches', ['enable-automation']);
         $options->setExperimentalOption('useAutomationExtension', false);
-        $capabilities->setCapability(ChromeOptions::CAPABILITY, $options);;
 
+        // 禁用SSL证书
+        $capabilities->setCapability('acceptSslCerts', false);
+        //无头
+        $capabilities->setCapability('ChromeOptions', ['args' => ['-headless']]);
+
+        $capabilities->setCapability(ChromeOptions::CAPABILITY, $options);;
         //隐性设置15秒
         return $driver = RemoteWebDriver::create($host, $capabilities, 2000);
     }
@@ -169,7 +179,6 @@ class Selenum
         $rand = rand(0, count($data) - 1);
         return $data[$rand];
     }
-
 
 
     /**
