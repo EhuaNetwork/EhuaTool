@@ -9,8 +9,8 @@
     "electrolinux/phpquery": "^0.9.6",
     "php-webdriver/webdriver": "^1.12",
     "symfony/var-dumper": "v5.4.0",
-	        "phpoffice/phpexcel": "^1.8",
-        "phpoffice/phpspreadsheet": "^1.19"
+    "phpoffice/phpexcel": "^1.8",
+    "phpoffice/phpspreadsheet": "^1.19"
   },
   "suggest":{
 
