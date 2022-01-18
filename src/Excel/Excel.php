@@ -6,6 +6,14 @@ namespace Ehua\Excel;
 use PHPExcel_IOFactory;
 use PHPExcel;
 
+
+/**
+ *
+ *需要composer 安装
+ *      "phpoffice/phpexcel": "^1.8",
+ "      "phpoffice/phpspreadsheet": "^1.19"
+ * @package Ehua\Excel
+ */
 class Excel
 {
     /**
