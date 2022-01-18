@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="更新代理ip规则">
+    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
@@ -144,7 +144,7 @@
       <workItem from="1642034037527" duration="7000" />
       <workItem from="1642480713231" duration="69000" />
       <workItem from="1642481087447" duration="840000" />
-      <workItem from="1642492547470" duration="10000" />
+      <workItem from="1642492547470" duration="133000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -419,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642481264476</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="更新代理ip规则">
+      <created>1642492563142</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1642492563142</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
