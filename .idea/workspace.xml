@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="">
+    <list default="true" id="24dc3a7d-4ee5-4f9a-9983-6bf23a339e10" name="默认变更列表" comment="更新1">
+      <change beforePath="$PROJECT_DIR$/.idea/EhuaTool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EhuaTool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Caiji/Selenum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Selenum.php" afterDir="false" />
     </list>
@@ -37,6 +38,35 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpexcel" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/electrolinux/phpquery" />
+      <path value="$PROJECT_DIR$/vendor/php-webdriver/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="21ATFp5vUx71HVxJ4yEha5izGm1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,21 +77,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Caiji" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src" />
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\Bt" />
       <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\Caiji" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\Bt" />
+      <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\Curl" />
       <recent name="C:\Users\ehua9\Desktop\EhuaTool\src\exe" />
       <recent name="C:\Users\ehua9\Desktop\EhuaTool\src" />
     </key>
@@ -102,7 +137,13 @@
       <workItem from="1640654718821" duration="2205000" />
       <workItem from="1640669026996" duration="265000" />
       <workItem from="1640669325539" duration="661000" />
-      <workItem from="1640675243333" duration="25000" />
+      <workItem from="1640675243333" duration="825000" />
+      <workItem from="1640738303719" duration="1209000" />
+      <workItem from="1641255401001" duration="698000" />
+      <workItem from="1641621063728" duration="1567000" />
+      <workItem from="1641949867223" duration="1303000" />
+      <workItem from="1642034037527" duration="7000" />
+      <workItem from="1642480713231" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1637384271649</created>
@@ -321,11 +362,90 @@
       <option name="project" value="LOCAL" />
       <updated>1640669965742</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="更新1">
+      <created>1640675275442</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1640675275442</updated>
+    </task>
+    <task id="LOCAL-00033" summary="更新">
+      <created>1641255520003</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1641255520003</updated>
+    </task>
+    <task id="LOCAL-00034" summary="更新">
+      <created>1641255885339</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1641255885339</updated>
+    </task>
+    <task id="LOCAL-00035" summary="更新">
+      <created>1641621421741</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1641621421741</updated>
+    </task>
+    <task id="LOCAL-00036" summary="新增 宝塔面板api操作类">
+      <created>1641950315055</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1641950315055</updated>
+    </task>
+    <task id="LOCAL-00037" summary="新增 微信支付操作类">
+      <created>1641952048063</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1641952048063</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/ehua9/Desktop/EhuaTool/src/Bt" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
@@ -333,7 +453,9 @@
     <MESSAGE value="新增文章采集操作类" />
     <MESSAGE value="优化注释" />
     <MESSAGE value="更新" />
+    <MESSAGE value="新增 宝塔面板api操作类" />
     <MESSAGE value="更新1" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新1" />
+    <MESSAGE value="新增 微信支付操作类" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增 微信支付操作类" />
   </component>
 </project>

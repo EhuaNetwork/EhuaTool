@@ -6,6 +6,7 @@ use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Exception\WebDriverException;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Facebook\WebDriver\Remote\WebDriverCapabilityType;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverKeys;
 use Facebook\WebDriver\WebDriverSelect;
@@ -75,6 +76,17 @@ class Selenum
 //我这里下载的是win32 Google Chrome Driver 2.25版：https://chromedriver.storage.googleapis.com/index.html?path=2.25/
 
         $capabilities = DesiredCapabilities::chrome();
+        //代理ip http://www.kxdaili.com/dailiip/2/1.html
+//        $proxyUrl = '101.132.227.173:8080';
+//        $capabilities = new DesiredCapabilities([
+//
+//            WebDriverCapabilityType::BROWSER_NAME => 'chrome',
+//            WebDriverCapabilityType::PROXY => [
+//                'proxyType' => 'manual',
+//                'httpProxy' => $proxyUrl,
+//                'sslProxy' => $proxyUrl,
+//            ]
+//        ]);
 //header头
         $useragent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.80 Safari/537.36';
         $options = new ChromeOptions();
