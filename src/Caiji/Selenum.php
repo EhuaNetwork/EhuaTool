@@ -71,7 +71,7 @@ class Selenum
      * 初始化方法
      * @return RemoteWebDriver
      */
-    static function init($prox = null)
+    static function init($prox = null, $path = '')
     {
         header("Content-Type: text/html; charset=UTF-8");
 // start Firefox with 5 second timeout
@@ -114,7 +114,9 @@ class Selenum
         $options->addArguments(['window-size=1200,768']);
 
 
-
+        if (!empty($path)) {
+            $options->setBinary($path);
+        }
 
         //浏览器设置不加载图片
 //        $value = ['profile.managed_default_content_settings.images' => 2];
