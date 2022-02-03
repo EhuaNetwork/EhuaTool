@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84e19ea2-f6ad-45f2-a92f-746200d629c1" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Caiji/Selenum.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caiji/Selenum.php" afterDir="false" />
-    </list>
+    <list default="true" id="84e19ea2-f6ad-45f2-a92f-746200d629c1" name="默认的" comment="更新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,18 +40,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643907994168</updated>
-      <workItem from="1643907995378" duration="749000" />
+      <workItem from="1643907995378" duration="1075000" />
     </task>
+    <task id="LOCAL-00001" summary="更新">
+      <created>1643908958268</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643908958268</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="739" y="266" key="FileChooserDialogImpl" timestamp="1643908021426">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="739" y="266" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1643908021426" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1643909020940">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1643909020940" />
     <state x="773" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1643908426028">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
