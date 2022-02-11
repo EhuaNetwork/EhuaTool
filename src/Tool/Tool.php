@@ -2,6 +2,7 @@
 
 namespace Ehua\Tool;
 
+
 class Tool
 {
 
@@ -16,7 +17,54 @@ class Tool
         $temp = array_pop($path);
         $path = implode('/', $path);
         self::dir_create($path);
-        file_put_contents($path . '/' . $temp , $body);
+        file_put_contents($path . '/' . $temp, $body);
+    }
+
+    /**
+     * 获取目录信息 及文件
+     * @param $path
+     * User: Ehua
+     * Alter: 2022/2/11 17:17
+     */
+    static function get_dir_file($path)
+    {
+        if (is_dir($path)) {
+            $dir = scandir($path);
+            foreach ($dir as $value) {
+                $sub_path = $path . '/' . $value;
+                if ($value == '.' || $value == '..') {
+                    continue;
+                } else if (is_dir($sub_path)) {
+                    echo '目录名:' . $value . '<br/>';
+                    self::get_dir_file($sub_path);
+                } else {
+                    //.$path 可以省略，直接输出文件名
+                    echo ' 最底层文件: ' . $path . ':' . $value . ' <hr/>';
+                }
+            }
+        }
+    }
+
+    /**
+     * 递归创建目录
+     * @param $path
+     * User: Ehua
+     * Alter: 2022/2/11 17:18
+     */
+    static function create_dir($path)
+    {
+        //判断目录存在否，存在给出提示，不存在则创建目录
+        if (is_dir($path)) {
+            return  'error';
+        } else {
+            //第三个参数是“true”表示能创建多级目录，iconv防止中文目录乱码
+            $res = mkdir($path, 0777, true);
+            if ($res) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     /**
@@ -37,6 +85,7 @@ class Tool
         fclose($file);
         return $content;
     }
+
     /**
      * 递归创建文件目录
      * @param $dir
