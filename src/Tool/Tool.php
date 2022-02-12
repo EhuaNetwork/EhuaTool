@@ -105,18 +105,19 @@ class Tool
         return $filesInside;
     }
 
+
     /**
      * 代码压缩包详细文件信息
      * @param int $id
      * @return array
      */
-    static function zip_info($zipPath)
+    static function zip_info($zipPath,$file)
     {
         $zipPath = $zipPath;
         $content = false;
         $zip = new \ZipArchive();
         if ($zip->open($zipPath) === true) {
-            $content = $zip->getFromName('uxradar/1.txt');
+            $content = $zip->getFromName($file);
             $content = $content && iconv('GBK', 'UTF-8', $content);
             $zip->close();
         }
