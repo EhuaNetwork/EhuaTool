@@ -88,7 +88,7 @@ class Tool
     /**
      * 读取压缩包目录
      */
-    public function zip_get($zipPath)
+    static function zip_get($zipPath)
     {
         $url =   $zipPath;
         $zipper = new \ZipArchive();
@@ -110,7 +110,7 @@ class Tool
      * @param int $id
      * @return array
      */
-    public function zip_info($zipPath)
+    static function zip_info($zipPath)
     {
         $zipPath = $zipPath;
         $content = false;
