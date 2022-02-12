@@ -118,7 +118,7 @@ class Tool
         $zip = new \ZipArchive();
         if ($zip->open($zipPath) === true) {
             $content = $zip->getFromName($file);
-            $content = $content && iconv('GBK', 'UTF-8', $content);
+//            $content = $content && iconv('GBK', 'UTF-8', $content);
             $zip->close();
         }
         return $content;
