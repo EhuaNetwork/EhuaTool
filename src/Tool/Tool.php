@@ -85,7 +85,43 @@ class Tool
         fclose($file);
         return $content;
     }
+    /**
+     * 读取压缩包目录
+     */
+    public function zip_get($zipPath)
+    {
+        $url =   $zipPath;
+        $zipper = new \ZipArchive();
+        $zipStatus = $zipper->open($url);
+        if ($zipStatus !== true) {
+            throw new \Exception('Could not open ZIP file. Error code: ' . $zipStatus);
+        }
+        $filesInside = [];
+        for ($i = 0; $i < $zipper->count(); $i++) {
+            array_push($filesInside, $zipper->getNameIndex($i));
+        }
+        $zipper->close();
 
+        return $filesInside;
+    }
+
+    /**
+     * 代码压缩包详细文件信息
+     * @param int $id
+     * @return array
+     */
+    public function zip_info($zipPath)
+    {
+        $zipPath = $zipPath;
+        $content = false;
+        $zip = new \ZipArchive();
+        if ($zip->open($zipPath) === true) {
+            $content = $zip->getFromName('uxradar/1.txt');
+            $content = $content && iconv('GBK', 'UTF-8', $content);
+            $zip->close();
+        }
+        return $this->success($content);
+    }
     /**
      * 递归创建文件目录
      * @param $dir
