@@ -120,7 +120,7 @@ class Tool
             $content = $content && iconv('GBK', 'UTF-8', $content);
             $zip->close();
         }
-        return $this->success($content);
+        return $content;
     }
     /**
      * 递归创建文件目录
