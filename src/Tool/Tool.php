@@ -55,7 +55,7 @@ class Tool
     {
         //判断目录存在否，存在给出提示，不存在则创建目录
         if (is_dir($path)) {
-            return  'error';
+            return 'error';
         } else {
             //第三个参数是“true”表示能创建多级目录，iconv防止中文目录乱码
             $res = mkdir($path, 0777, true);
@@ -85,12 +85,13 @@ class Tool
         fclose($file);
         return $content;
     }
+
     /**
      * 读取压缩包目录
      */
     static function zip_get($zipPath)
     {
-        $url =   $zipPath;
+        $url = $zipPath;
         $zipper = new \ZipArchive();
         $zipStatus = $zipper->open($url);
         if ($zipStatus !== true) {
@@ -104,6 +105,7 @@ class Tool
 
         return $filesInside;
     }
+
     /**
      * 压缩目录
      * @param $dir 目标目录路径
@@ -139,12 +141,30 @@ class Tool
         return null;
     }
 
+
+    /**
+     * 下载压缩包
+     * @param int $id
+     * @return array
+     */
+    static function zip_download($zipPath, $delete = false)
+    {
+        header('Content-Type:text/html;charset=utf-8');
+        header('Content-disposition:attachment;filename=test.zip');
+        $filesize = filesize($zipPath);
+        readfile($zipPath);
+        header('Content-length:' . $filesize);
+        if ($delete) {
+            unlink($zipPath);
+        }
+    }
+
     /**
      * 代码压缩包详细文件信息
      * @param int $id
      * @return array
      */
-    static function zip_info($zipPath,$file)
+    static function zip_info($zipPath, $file)
     {
         $zipPath = $zipPath;
         $content = false;
@@ -156,6 +176,7 @@ class Tool
         }
         return $content;
     }
+
     /**
      * 递归创建文件目录
      * @param $dir
