@@ -104,7 +104,40 @@ class Tool
 
         return $filesInside;
     }
+    /**
+     * 压缩目录
+     * @param $dir 目标目录路径
+     * @param $zip ZipArchive类对象
+     * @param $prev
+     */
+    static function zip_ya_dir($dir, $zip, $prev = '.')
+    {
+//        $zip = new \ZipArchive();
+//        $res = $zip->open('test.zip', \ZipArchive::OVERWRITE | \ZipArchive::CREATE);
+//        if($res)
+//        {
+//            Tool::zip_ya_dir('产品展示', $zip);
+//            $zip->close();
+//        }
 
+        $handler = opendir($dir);
+        $basename = basename($dir);
+        $zip->addEmptyDir($prev . '/' . $basename);
+        while ($file = readdir($handler)) {
+            $realpath = $dir . '/' . $file;
+            if (is_dir($realpath)) {
+                if ($file !== '.' && $file !== '..') {
+                    $zip->addEmptyDir($prev . '/' . $basename . '/' . $file);
+                    self::compressDir($realpath, $zip, $prev . '/' . $basename);
+                }
+            } else {
+                $zip->addFile($realpath, $prev . '/' . $basename . '/' . $file);
+            }
+        }
+
+        closedir($handler);
+        return null;
+    }
 
     /**
      * 代码压缩包详细文件信息
@@ -136,6 +169,7 @@ class Tool
             }
         }
     }
+
 
     /**
      * 只取中文
