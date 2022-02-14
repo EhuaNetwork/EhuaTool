@@ -128,7 +128,7 @@ class Tool
             if (is_dir($realpath)) {
                 if ($file !== '.' && $file !== '..') {
                     $zip->addEmptyDir($prev . '/' . $basename . '/' . $file);
-                    self::compressDir($realpath, $zip, $prev . '/' . $basename);
+                    self::zip_ya_dir($realpath, $zip, $prev . '/' . $basename);
                 }
             } else {
                 $zip->addFile($realpath, $prev . '/' . $basename . '/' . $file);
