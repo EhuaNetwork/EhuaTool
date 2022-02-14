@@ -160,6 +160,35 @@ class Tool
     }
 
     /**
+     * 递归删除目录文件
+     * @param $dir
+     * @return bool
+     * User: Ehua
+     * Alter: 2022/2/14 16:46
+     */
+    static  function deldir($dir) {
+        //先删除目录下的文件：
+        $dh=opendir($dir);
+        while ($file=readdir($dh)) {
+            if($file!="." && $file!="..") {
+                $fullpath=$dir."/".$file;
+                if(!is_dir($fullpath)) {
+                    unlink($fullpath);
+                } else {
+                    deldir($fullpath);
+                }
+            }
+        }
+
+        closedir($dh);
+        //删除当前文件夹：
+        if(rmdir($dir)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    /**
      * 代码压缩包详细文件信息
      * @param int $id
      * @return array
