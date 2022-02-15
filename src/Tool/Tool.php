@@ -177,7 +177,7 @@ class Tool
                 if(!is_dir($fullpath)) {
                     unlink($fullpath);
                 } else {
-                    self::deldir($fullpath);
+                    self::file_deldir($fullpath);
                 }
             }
         }
