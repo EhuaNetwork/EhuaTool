@@ -168,6 +168,8 @@ class Tool
      */
     static  function file_deldir($dir) {
         //先删除目录下的文件：
+        $dir=iconv ( "UTF-8", "GBK",$dir);
+
         $dh=opendir($dir);
         while ($file=readdir($dh)) {
             if($file!="." && $file!="..") {
