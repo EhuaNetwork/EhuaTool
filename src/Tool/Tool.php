@@ -166,7 +166,7 @@ class Tool
      * User: Ehua
      * Alter: 2022/2/14 16:46
      */
-    static  function deldir($dir) {
+    static  function file_deldir($dir) {
         //先删除目录下的文件：
         $dh=opendir($dir);
         while ($file=readdir($dh)) {
