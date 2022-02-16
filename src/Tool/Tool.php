@@ -20,6 +20,41 @@ class Tool
         file_put_contents($path . '/' . $temp, $body);
     }
 
+
+    /**
+     * 解压文件
+     * @param $zipPath
+     * @param $ppath
+     * @return void
+     */
+    static function zip_jie_file($zipPath,$ppath)
+    {
+        $zip = new \ZipArchive;//新建一个ZipArchive的对象
+        /*
+        通过ZipArchive的对象处理zip文件
+        $zip->open这个方法的参数表示处理的zip文件名。
+        如果对zip文件对象操作成功，$zip->open这个方法会返回TRUE
+        */
+
+        if ($zip->open($zipPath) === TRUE) {
+
+            $zipFile = $zipPath;
+            $folder = $zip->getNameIndex(0);
+            for ($i = 1; $i < $zip->numFiles; $i++) {
+                $filename = $zip->getNameIndex($i);
+                if (substr($filename, -1, 1) === '/') {
+                    continue;
+                }
+                $newFileName = $ppath . '/' . str_replace($folder, '', $filename);
+                if (!file_exists(dirname($newFileName))) {
+                    mkdir(dirname($newFileName), 0644, true);
+                }
+                copy("zip://{$zipFile}#{$filename}", $newFileName);
+            }
+            $zip->close();
+        }
+    }
+
     /**
      * 获取目录信息 及文件
      * @param $path
@@ -166,15 +201,16 @@ class Tool
      * User: Ehua
      * Alter: 2022/2/14 16:46
      */
-    static  function file_deldir($dir) {
+    static function file_deldir($dir)
+    {
         //先删除目录下的文件：
 //        $dir=iconv ( "UTF-8", "GBK",$dir);
 
-        $dh=opendir($dir);
-        while ($file=readdir($dh)) {
-            if($file!="." && $file!="..") {
-                $fullpath=$dir."/".$file;
-                if(!is_dir($fullpath)) {
+        $dh = opendir($dir);
+        while ($file = readdir($dh)) {
+            if ($file != "." && $file != "..") {
+                $fullpath = $dir . "/" . $file;
+                if (!is_dir($fullpath)) {
                     unlink($fullpath);
                 } else {
                     self::file_deldir($fullpath);
@@ -184,12 +220,13 @@ class Tool
 
         closedir($dh);
         //删除当前文件夹：
-        if(rmdir($dir)) {
+        if (rmdir($dir)) {
             return true;
         } else {
             return false;
         }
     }
+
     /**
      * 代码压缩包详细文件信息
      * @param int $id
