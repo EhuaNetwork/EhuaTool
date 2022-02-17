@@ -39,7 +39,7 @@ class Tool
         if ($zip->open($zipPath) === TRUE) {
 
             $zipFile = $zipPath;
-            $folder = $zip->getNameIndex(0);
+            $folder = '/'.$zip->getNameIndex(0);
             for ($i = 1; $i < $zip->numFiles; $i++) {
                 $filename = $zip->getNameIndex($i);
                 if (substr($filename, -1, 1) === '/') {
