@@ -20,6 +20,28 @@ class Tool
         file_put_contents($path . '/' . $temp, $body);
     }
 
+    /**
+     * 访问请求文件下载
+     * @param $url          远程路径
+     * @param $newfname     本地路径
+     * @return void
+     */
+    static function downlad_file($url,$newfname){
+        $file = fopen ($url, "rb");
+        if ($file) {
+            $newf = fopen ($newfname, "wb");
+            if ($newf)
+                while(!feof($file)) {
+                    fwrite($newf, fread($file, 1024 * 8 ), 1024 * 8 );
+                }
+        }
+        if ($file) {
+            fclose($file);
+        }
+        if ($newf) {
+            fclose($newf);
+        }
+    }
 
     /**
      * 解压文件
