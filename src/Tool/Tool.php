@@ -77,7 +77,7 @@ class Tool
                     "verify_peer_name" => false,
                 ]
             ])));
-            $body = str_replace($temp_img, $topath, $body);
+            $body = str_replace($temp_img, $topath.$rand, $body);
         }
         return $body;
     }
