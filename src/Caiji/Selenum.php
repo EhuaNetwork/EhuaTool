@@ -21,6 +21,22 @@ use Facebook\WebDriver\WebDriverSelect;
 class Selenum
 {
 
+    /**
+     * 获取选中的Select
+     * @param $driver
+     * @param $xpath
+     * @return false
+     */
+    static function getSelect($driver,$xpath){
+        $selectAcao =new WebDriverSelect($driver->findElement($xpath));
+        $op_list = $selectAcao->getOptions();
+        foreach ($op_list as $op_lis) {
+            if ($op_lis->isSelected()) {
+                return $op_lis->getText();
+            };
+        }
+        return  false;
+    }
     static function setSelect($driver, $xpath, $value)
     {
         $elm = $driver->findElement(
