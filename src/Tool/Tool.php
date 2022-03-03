@@ -44,6 +44,64 @@ class Tool
     }
 
     /**
+     * html图片转本地
+     * @param $domain           域名补全
+     * @param $topath           相对路径   不要用全路径
+     * @param $html             html
+     * @return array|bool|\phpQuery|\QueryTemplatesParse|\QueryTemplatesSource|\QueryTemplatesSourceQuery|string|string[]|\unknown_type
+     */
+    static function html_put_img($domain, $topath, $html)
+    {
+        $res = Tool::str_To_Utf8($html);
+        $res = str_replace('gb2312', 'utf-8', $res);
+
+        $res = \phpQuery::newDocument($res);
+        \phpQuery::selectDocument($res);
+        $imgs = pq('')->find('img');
+        $body = pq('')->html();
+        //去除所有img
+        for ($i = 0; $i < $imgs->count(); $i++) {
+            $temp_img = $imgs->eq($i)->attr('src');
+            if (substr($temp_img, 0, 1) == '\\' || substr($temp_img, 0, 1) == '/') {
+                $img = $domain . ($temp_img);
+            } else {
+                $img = $temp_img;
+            }
+
+            $img = self::str_to_url($img);
+
+            $rand = basename($img);
+            file_put_contents($topath.$rand, file_get_contents(($img), false, stream_context_create([
+                "ssl" => [
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                ]
+            ])));
+            $body = str_replace($temp_img, $topath, $body);
+        }
+        return $body;
+    }
+
+
+    /**
+     * 文字转url格式
+     * @param $str
+     * @return array|mixed|string|string[]
+     */
+    static function str_to_url($str)
+    {
+        preg_match_all("/[\x{4e00}-\x{9fff}]+/u", $str, $matches);
+        if (!empty($matches[0])) {
+            for ($i = 0; $i < count($matches[0]); $i++) {
+                $str = str_replace($matches[0][$i], urlencode($matches[0][$i]), $str);
+            }
+        }
+        return $str;
+    }
+
+
+
+    /**
      * 解压文件
      * @param $zipPath
      * @param $ppath
