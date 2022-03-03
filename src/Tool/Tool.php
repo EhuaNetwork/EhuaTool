@@ -52,6 +52,8 @@ class Tool
      */
     static function html_put_img($domain, $topath, $html)
     {
+        Tool::dir_create($topath);
+
         $res = Tool::str_To_Utf8($html);
         $res = str_replace('gb2312', 'utf-8', $res);
 
