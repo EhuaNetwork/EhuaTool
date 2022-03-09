@@ -115,6 +115,7 @@ class Tool
                 }
 //                $newFileName = $ppath  . str_replace($folder, '', $filename);
                 $newFileName = $ppath  .  $filename;
+
                 if (!file_exists(dirname($newFileName))) {
                     mkdir(dirname($newFileName), 0755, true);
                 }
