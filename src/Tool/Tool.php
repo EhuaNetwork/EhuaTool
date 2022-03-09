@@ -113,7 +113,8 @@ class Tool
                 if (substr($filename, -1, 1) === '/') {
                     continue;
                 }
-                $newFileName = $ppath  . str_replace($folder, '', $filename);
+//                $newFileName = $ppath  . str_replace($folder, '', $filename);
+                $newFileName = $ppath  .  $filename;
                 if (!file_exists(dirname($newFileName))) {
                     mkdir(dirname($newFileName), 0755, true);
                 }
