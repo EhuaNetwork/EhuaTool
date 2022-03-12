@@ -13,6 +13,7 @@ class Tool
      */
     static function file_put_contents_ehua($path, $body)
     {
+        $path=str_replace("\\",'/',$path);
         $path = explode('/', $path);
         $temp = array_pop($path);
         $path = implode('/', $path);
