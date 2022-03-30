@@ -35,7 +35,7 @@ class Tool
                 while(!feof($file)) {
                     fwrite($newf, fread($file, 1024 * 8 ), 1024 * 8 );
                 }
-        }
+        } 
         if ($file) {
             fclose($file);
         }
