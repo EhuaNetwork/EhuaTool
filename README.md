@@ -1,3 +1,3 @@
 # EhuaTool
-安装:composer require ehua/tool dev-master
+安装最新:composer require ehua/tool dev-master
 
