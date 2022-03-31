@@ -13,7 +13,7 @@ class Tool
      */
     static function file_put_contents_ehua($path, $body)
     {
-        $path=str_replace("\\",'/',$path);
+        $path = str_replace("\\", '/', $path);
         $path = explode('/', $path);
         $temp = array_pop($path);
         $path = implode('/', $path);
@@ -27,15 +27,16 @@ class Tool
      * @param $newfname     本地路径
      * @return void
      */
-    static function downlad_file($url,$newfname){
-        $file = fopen ($url, "rb");
+    static function downlad_file($url, $newfname)
+    {
+        $file = fopen($url, "rb");
         if ($file) {
-            $newf = fopen ($newfname, "wb");
+            $newf = fopen($newfname, "wb");
             if ($newf)
-                while(!feof($file)) {
-                    fwrite($newf, fread($file, 1024 * 8 ), 1024 * 8 );
+                while (!feof($file)) {
+                    fwrite($newf, fread($file, 1024 * 8), 1024 * 8);
                 }
-        } 
+        }
         if ($file) {
             fclose($file);
         }
@@ -74,20 +75,16 @@ class Tool
             $img = self::str_to_url($img);
 
             $rand = basename($img);
-            file_put_contents($topath.$rand, file_get_contents(($img), false, stream_context_create([
+            file_put_contents($topath . $rand, file_get_contents(($img), false, stream_context_create([
                 "ssl" => [
                     "verify_peer" => false,
                     "verify_peer_name" => false,
                 ]
             ])));
-            $body = str_replace($temp_img, $topath.$rand, $body);
+            $body = str_replace($temp_img, $topath . $rand, $body);
         }
         return $body;
     }
-
-
-
-
 
 
     /**
@@ -96,7 +93,7 @@ class Tool
      * @param $ppath
      * @return void
      */
-    static function zip_jie_file($zipPath,$ppath)
+    static function zip_jie_file($zipPath, $ppath)
     {
         $zip = new \ZipArchive;//新建一个ZipArchive的对象
         /*
@@ -108,14 +105,14 @@ class Tool
         if ($zip->open($zipPath) === TRUE) {
 
             $zipFile = $zipPath;
-            $folder = '/'.$zip->getNameIndex(0);
+            $folder = '/' . $zip->getNameIndex(0);
             for ($i = 1; $i < $zip->numFiles; $i++) {
                 $filename = $zip->getNameIndex($i);
                 if (substr($filename, -1, 1) === '/') {
                     continue;
                 }
 //                $newFileName = $ppath  . str_replace($folder, '', $filename);
-                $newFileName = $ppath  .  $filename;
+                $newFileName = $ppath . $filename;
 
                 if (!file_exists(dirname($newFileName))) {
                     mkdir(dirname($newFileName), 0755, true);
@@ -123,8 +120,9 @@ class Tool
                 copy("zip://{$zipFile}#{$filename}", $newFileName);
             }
             $zip->close();
-        }else{
-            var_dump('file open error');die;
+        } else {
+            var_dump('file open error');
+            die;
         }
     }
 
