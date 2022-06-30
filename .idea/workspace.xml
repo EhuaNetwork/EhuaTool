@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84e19ea2-f6ad-45f2-a92f-746200d629c1" name="默认的" comment="更新" />
+    <list default="true" id="ad4bff24-3a4d-4060-8377-6b953d0b21ff" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/EhuaTool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EhuaTool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rest/Fulu/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rest/Fulu/Common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rest/Fulu/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rest/Fulu/Order.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="24bn8VE1rYdlAhXRVlEtGE1OJhl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
+  <component name="ProjectId" id="28Pp5Flf5axwiTbV4Dj53bCiziN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\wwwroot\ehua_tool\src" />
-    </key>
+  <component name="RunManager" selected="PHP Script.Test.php">
+    <configuration name="EasyPay.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Pay/Easypay/EasyPay.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="Test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Rest/Fulu/Test.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Test.php" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="84e19ea2-f6ad-45f2-a92f-746200d629c1" name="默认的" comment="" />
-      <created>1643907994168</created>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ad4bff24-3a4d-4060-8377-6b953d0b21ff" name="默认变更列表" comment="" />
+      <created>1651127890320</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1643907994168</updated>
-      <workItem from="1643907995378" duration="1075000" />
+      <updated>1651127890320</updated>
+      <workItem from="1651127891985" duration="3995000" />
+      <workItem from="1656576345429" duration="5104000" />
     </task>
-    <task id="LOCAL-00001" summary="更新">
-      <created>1643908958268</created>
+    <task id="LOCAL-00001" summary="新增福利API">
+      <created>1656579499241</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1643908958268</updated>
+      <updated>1656579499241</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -56,21 +75,57 @@
     <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="新增福利API" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增福利API" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="266" key="FileChooserDialogImpl" timestamp="1643908021426">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="541" y="175" key="#CLI_Interpreters" timestamp="1656581176099">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="266" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1643908021426" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1643909020940">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="541" y="175" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1656581176099" />
+    <state x="643" y="162" key="#PHP" timestamp="1656581178251">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1643909020940" />
-    <state x="773" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1643908426028">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="643" y="162" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1656581178251" />
+    <state x="662" y="200" key="#Test.php" timestamp="1656581180789">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="773" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1643908426028" />
+    <state x="662" y="200" key="#Test.php/0.0.1920.1040@0.0.1920.1040" timestamp="1656581180789" />
+    <state x="558" y="87" key="CommitChangelistDialog2" timestamp="1656579498217">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="87" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1656579498217" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1656581302659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1656581302659" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1656581302659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1656581302659" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1656581302659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1656581302659" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1656581302659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1656581302659" />
+    <state x="742" y="240" key="NewPhpClassDialog" timestamp="1656577696134">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="742" y="240" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1656577696134" />
+    <state x="776" y="443" key="NewPhpFileDialog" timestamp="1656580495236">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="776" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1656580495236" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1656579501050">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1656579501050" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1656576376657">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1656576376657" />
   </component>
 </project>
