@@ -16,13 +16,13 @@ class Order extends Common
      *
      * 3、“订单查询接口”必须接入；
      */
-    public function mobile($phone, $money)
+    public function mobile($data,$phone, $money)
     {
 
         $biz_content = [
             'charge_phone' => $phone,//充值手机号
             'charge_value' => $money,//充值数额
-            'customer_order_no' => uniqid(),//外部订单号
+            'customer_order_no' => $data['order_no'],//外部订单号
             'customer_price' => $money,//外部销售价
             'shop_type' => '系统',//店铺类型（PDD、淘宝、天猫、京东、苏宁、其他）；非必填字段，可忽略
             'external_biz_id' => 'C564982164',//透传字段
@@ -205,6 +205,24 @@ class Order extends Common
         $encryptString = base64_decode($enpass);
         $decryptedpass = rtrim(openssl_decrypt($encryptString, 'aes-256-ecb', $this->AppSecret, OPENSSL_RAW_DATA));
         return trim($decryptedpass);
+    }
+
+
+    /**
+     * 回调 验证签名
+     * @param $input
+     * @return bool
+     */
+    public function notify($input)
+    {
+        $re_sign = $input['sign'];
+        unset($input['sign']);
+        $sign = $this->getSign($input);
+        if ($re_sign == $sign) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
