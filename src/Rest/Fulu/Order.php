@@ -203,10 +203,10 @@ class Order extends Common
     public function decode($enpass)
     {
         $encryptString = base64_decode($enpass);
-        $decryptedpass = rtrim(openssl_decrypt($encryptString, 'aes-256-ecb', $this->secret, OPENSSL_RAW_DATA));
-
+        $decryptedpass = rtrim(openssl_decrypt($encryptString, 'aes-256-ecb', $this->AppSecret, OPENSSL_RAW_DATA));
         return trim($decryptedpass);
     }
+
 
 
 
