@@ -174,7 +174,7 @@ class Order extends Common
         ];
         $data = [
             'app_key' => $this->app_key,
-            'method' => 'fulu.order.mobile.add',
+            'method' => 'fulu.order.info.get',
             'timestamp' => date('Y-m-d H:i:s', time()),
             'version' => '2.0',
             'format' => 'json',
@@ -187,6 +187,26 @@ class Order extends Common
         return $this->http($data);
     }
 
+
+    /**
+     * 基础数据（测试使用）：
+     *
+     * AppKey：i4esv1l+76l/7NQCL3QudG90Fq+YgVfFGJAWgT+7qO1Bm9o/adG/1iwO2qXsAXNB
+     * AppSecret：0a091b3aa4324435aab703142518a8f7
+     * TestCardnumber：12nCp6X/nALmrvr1erxK+D4L8n/kqz/RItKWUfvZrCU=
+     * TestCardpasswrod：9HeOgdv+NpLihh2+5Gm0Mj4L8n/kqz/RItKWUfvZrCU=
+     * 注意：第三方依赖：commons-codec-1.11.jar、gson-2.8.5.jar、bcprov-jdk15on.jar；卡密解密中对于强加密长度超过128的，需要替换jre/lib/security下两个jar包，“ocal_policy.jar ”和“US_export_policy.jar”下载及参考文档：https://blog.csdn.net/tomatocc/article/details/85096911
+     * 解密方法（示例仅供参考）
+     * @param $enpass
+     * @return string
+     */
+    public function decode($enpass)
+    {
+        $encryptString = base64_decode($enpass);
+        $decryptedpass = rtrim(openssl_decrypt($encryptString, 'aes-256-ecb', $this->secret, OPENSSL_RAW_DATA));
+
+        return trim($decryptedpass);
+    }
 
 
 
